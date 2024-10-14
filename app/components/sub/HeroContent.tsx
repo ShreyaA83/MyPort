@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/16/solid";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
+// import { TextGenerateEffect } from "../ui/text-generate-effect";
 import Chaos from "../main/Chaos";
 
 const HeroContent = () => {
@@ -21,7 +21,7 @@ const HeroContent = () => {
           className="Welcome-box py-3 px-6 border border-[#7042f88b] opacity-[0.9] flex items-center justify-center lg:justify-start"
         >
           <SparklesIcon className="text-[#b49bff] mr-2 h-5 w-5" />
-          <TextGenerateEffect className="Welcome-text text-sm lg:text-[13px]" words="Developer. Analyst. Thinker." />
+          <h3 className="Welcome-text text-sm lg:text-[13px]">Developer. Analyst. Thinker.</h3> 
         </motion.div>
 
         {/* Main Heading */}
