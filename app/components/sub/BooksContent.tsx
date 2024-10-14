@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { Hourglass } from 'react-loader-spinner';
 
 interface Book {
   title: string;
@@ -48,10 +49,9 @@ const books: Book[] = [
   { title: "When Breath Becomes Air", author: "Paul Kalanithi", isbn: "9780812988406" }
 ];
 
-
-
 const BooksContent = () => {
   const [bookData, setBookData] = useState<{ [key: string]: string }>({});
+  const [isLoading, setIsLoading] = useState(true); // Added loading state
 
   useEffect(() => {
     const fetchBookCovers = async () => {
@@ -76,39 +76,45 @@ const BooksContent = () => {
         }
       }
       setBookData(fetchedData);
+      setIsLoading(false); // Stop loading after data is fetched
     };
 
     fetchBookCovers();
   }, []);
 
   return (
-    <div
-      id="books"
-      className="grid grid-cols-4 gap-10 pt-10 justify-center"
-    >
-      {books.map((book) => (
-        <div 
-          key={book.title} 
-          className="flex flex-col items-center" 
-          style={{ textAlign: "center" }}
-        >
-          <img
-            src={bookData[book.title] || "/fallback-cover.jpg"}
-            alt={`${book.title} cover`}
-            style={{ width: "150px", height: "230px", objectFit: "cover" }}
-          />
-          <h3 
-            style={{ margin: "10px 0 0", color: "white", textAlign: "center" }}
-          >
-            {book.title}
-          </h3>
-          <p 
-            style={{ margin: "5px 0", color: "white", textAlign: "center" }}
-          >
-            {book.author}
-          </p>
+    <div>
+      {isLoading ? (
+        <div className="loader-container pt-40">
+          <div className="spinner"></div> {/* Replace with any spinner */}
+          <p style={{ color: "white", textAlign: "center", justifyContent: "center" }}><Hourglass /></p>
         </div>
-      ))}
+      ) : (
+        <div
+          id="books"
+          className="grid grid-cols-4 gap-10 pt-10 justify-center"
+        >
+          {books.map((book) => (
+            <div
+              key={book.title}
+              className="flex flex-col items-center"
+              style={{ textAlign: "center" }}
+            >
+              <img
+                src={bookData[book.title] || "/fallback-cover.jpg"}
+                alt={`${book.title} cover`}
+                style={{ width: "150px", height: "230px", objectFit: "cover" }}
+              />
+              {/* <h3 style={{ margin: "10px 0 0", color: "white", textAlign: "center" }}>
+                {book.title}
+              </h3>
+              <p style={{ margin: "5px 0", color: "white", textAlign: "center" }}>
+                {book.author}
+              </p> */}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
