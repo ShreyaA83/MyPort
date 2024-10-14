@@ -24,16 +24,16 @@ const Navbar = () => {
 
         <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
           <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            <Link href="/" className="cursor-pointer">
+            <Link href="/" className="cursor-pointer hover:text-[#d0d1ff]">
               Home
             </Link>
-            <Link href="/#skills" className="cursor-pointer">
+            <Link href="/#skills" className="cursor-pointer  hover:text-[#d0d1ff]">
               Skills
             </Link>
-            <Link href="/#projects" className="cursor-pointer">
+            <Link href="/#projects" className="cursor-pointer  hover:text-[#d0d1ff]">
               Projects
             </Link>
-            <Link href="/#connect" className="cursor-pointer">
+            <Link href="/#connect" className="cursor-pointer  hover:text-[#d0d1ff]">
               Connect
             </Link>
           </div>
