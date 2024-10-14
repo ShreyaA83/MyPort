@@ -13,6 +13,14 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
     },
+
+    screens: {
+      'xs': '400px',
+      'sm': '400px', // Default small breakpoint
+      'md': '768px', // Default medium breakpoint
+      'lg': '1024px', // Default large breakpoint
+      'xl': '1280px', // Extra large breakpoint
+    },
   },
   plugins: [],
 };

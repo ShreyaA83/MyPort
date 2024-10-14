@@ -2,6 +2,7 @@
 import Hero from "./components/main/Hero";
 import { Projects } from "./components/main/Projects";
 import Skills from "./components/main/Skills";
+import Contact from "./components/main/Contact";
 // import Link from 'next/link';
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
         <Hero />
         <Skills />
         <Projects />
-
+        <Contact />
       </div>
     </main>
   );

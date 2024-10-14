@@ -1,38 +1,36 @@
 "use client";
-import React from 'react';
-// import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion';
-import { SparklesIcon } from '@heroicons/react/16/solid';
-import { TextGenerateEffect } from '../ui/text-generate-effect';
-import Chaos from '../main/Chaos';
-import Link from 'next/link';
+import React from "react";
+import { motion } from "framer-motion";
+import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
+import { SparklesIcon } from "@heroicons/react/16/solid";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
+import Chaos from "../main/Chaos";
+import Link from "next/link";
 
 const HeroContent = () => {
-    return (
+  return (
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      className="flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20 mt-20 lg:mt-40 w-full z-[20] space-y-10 lg:space-y-0"
+    >
+      {/* Left Section - Text Content */}
+      <div className="h-full w-full flex flex-col gap-5 justify-center text-center lg:text-start">
+        {/* Welcome Box */}
         <motion.div
-            initial="hidden"
-            animate="visible"
-            className="flex flex-row items-center justify-center 
-            px-20 mt-40 w-full z-[20]"
+          variants={slideInFromTop}
+          className="Welcome-box py-3 px-6 border border-[#7042f88b] opacity-[0.9] flex items-center justify-center lg:justify-start"
         >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
-      <motion.div
-                    variants={slideInFromTop}
-                    className='Welcome-box py-[12px] px-[30px] border border-[#7042f88b] opacity-[0.9]'
-                >
-                    <SparklesIcon className='text-[#b49bff] mr-[10px] h-5 w-5' />
+          <SparklesIcon className="text-[#b49bff] mr-2 h-5 w-5" />
+          <TextGenerateEffect className="Welcome-text text-sm lg:text-[13px]" words="Developer. Analyst. Thinker." />
+        </motion.div>
 
-                    {/* <h1 className='Welcome-text text-[13px]'> Developer. Thinker. Analyst</h1> */}
-                    <TextGenerateEffect
-                        className='Welcome-text text-[13px]'
-                        words='Developer. Analyst. Thinker.' />
-
-                </motion.div>
-                <motion.div
-                    variants={slideInFromLeft(0.5)}
-                    className='flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto'>
-                    <span>
+        {/* Main Heading */}
+        <motion.div
+          variants={slideInFromLeft(0.5)}
+          className="flex flex-col gap-4 mt-6 text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-full lg:max-w-[600px]"
+        >
+          <span>
             Providing
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
@@ -40,42 +38,44 @@ const HeroContent = () => {
             </span>
             project experience
           </span>
+        </motion.div>
 
-                </motion.div>
-                <motion.p
-                    variants={slideInFromLeft(0.8)}
-                    className='text-lg text-gray-400 my-5 max-w-[600px]'
-                >
-                    I am a Full Stack Software Developer & Data Scientist, 
-                    
-                    with a penchant for all things space and data.
-      
-                    </motion.p>
-                    <motion.div
-  variants={slideInFromLeft(1.1)}
-  className="flex flex-row items-center gap-2 py-2" 
->
-  <a
-    href="https://drive.google.com/file/d/1mjG9d3Wagc2P9dvr2qP4o4IUorWFDcyH/view?usp=sharing"
-    target="_blank" // Optional: opens the link in a new tab
-    className='button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] px-4 py-2'
-  >
-    Resume
-  </a>
+        {/* Subheading */}
+        <motion.p
+          variants={slideInFromLeft(0.8)}
+          className="text-base md:text-lg text-gray-400 my-4 max-w-full lg:max-w-[600px]"
+        >
+          I am a Full Stack Software Developer & Data Scientist, with a penchant for all things space and data.
+        </motion.p>
 
-  <Link href="/books">
-    <div className="button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] px-4 py-2">
-      Books
-    </div>
-  </Link>
-</motion.div>
+        {/* Buttons */}
+        <motion.div
+          variants={slideInFromLeft(1.1)}
+          className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 py-2"
+        >
+          <a
+            href="https://drive.google.com/file/d/1mjG9d3Wagc2P9dvr2qP4o4IUorWFDcyH/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button-primary text-center text-white cursor-pointer rounded-lg px-4 py-2 w-40"
+          >
+            Resume
+          </a>
 
-
+          <Link href="/books">
+            <div className="button-primary text-center text-white cursor-pointer rounded-lg px-4 py-2 w-40">
+              Books
             </div>
-            <motion.div
+          </Link>
+        </motion.div>
+      </div>
+
+      {/* Right Section - Image/Chaos Component */}
+      <motion.div
         variants={slideInFromRight(0.8)}
         className="w-full h-full flex justify-center items-center"
       >
+        {/* Responsive Image Placeholder */}
         {/* <Image
           src="/heroimg.png"
           alt="work icons"
@@ -85,9 +85,7 @@ const HeroContent = () => {
         <Chaos />
       </motion.div>
     </motion.div>
+  );
+};
 
-
-    )
-}
-
-export default HeroContent
+export default HeroContent;
