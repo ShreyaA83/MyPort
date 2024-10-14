@@ -5,7 +5,6 @@ import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motio
 import { SparklesIcon } from "@heroicons/react/16/solid";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import Chaos from "../main/Chaos";
-import Link from "next/link";
 
 const HeroContent = () => {
   return (
@@ -61,12 +60,6 @@ const HeroContent = () => {
           >
             Resume
           </a>
-
-          <Link href="/books">
-            <div className="button-primary text-center text-white cursor-pointer rounded-lg px-4 py-2 w-40">
-              Books
-            </div>
-          </Link>
         </motion.div>
       </div>
 

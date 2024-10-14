@@ -15,12 +15,10 @@ const Contact = () => {
         <TextGenerateEffect
           className='gap-6 text-6xl font-bold text-white-400 max-w-[600px] w-auto h-auto z-400'
           words='Connect With Me' 
-        />
-      </div>
+        />      
+      </div>    
       <div className="h-[40rem] w-full flex items-center justify-center ">
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5'>
-
-
           {/* First Contact Card */}
           <PinContainer
             title="GitHub - CLICK ME"
