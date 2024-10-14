@@ -1,11 +1,12 @@
 "use client";
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion';
 import { SparklesIcon } from '@heroicons/react/16/solid';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
 import Chaos from '../main/Chaos';
+import Link from 'next/link';
 
 const HeroContent = () => {
     return (
@@ -50,15 +51,25 @@ const HeroContent = () => {
                     with a penchant for all things space and data.
       
                     </motion.p>
-                    <motion.a
-    href="https://drive.google.com/file/d/1mjG9d3Wagc2P9dvr2qP4o4IUorWFDcyH/view?usp=sharing" 
-    target="_blank" // Optional: opens the link in a new tab
-    variants={slideInFromLeft(1.1)}
-    className='py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]'
+                    <motion.div
+  variants={slideInFromLeft(1.1)}
+  className="flex flex-row items-center gap-2 py-2" 
 >
-Know Me More!
-  <div>[Resume]</div>
-</motion.a>
+  <a
+    href="https://drive.google.com/file/d/1mjG9d3Wagc2P9dvr2qP4o4IUorWFDcyH/view?usp=sharing"
+    target="_blank" // Optional: opens the link in a new tab
+    className='button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] px-4 py-2'
+  >
+    Know Me More!
+  </a>
+
+  <Link href="/books">
+    <div className="button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] px-4 py-2">
+      Books
+    </div>
+  </Link>
+</motion.div>
+
 
             </div>
             <motion.div

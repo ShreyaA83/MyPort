@@ -1,6 +1,8 @@
+"use client";
 import Hero from "./components/main/Hero";
 import { Projects } from "./components/main/Projects";
 import Skills from "./components/main/Skills";
+// import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -9,6 +11,7 @@ export default function Home() {
         <Hero />
         <Skills />
         <Projects />
+
       </div>
     </main>
   );
