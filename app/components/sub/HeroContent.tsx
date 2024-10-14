@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-// import Image from 'next/image';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion';
 import { SparklesIcon } from '@heroicons/react/16/solid';
@@ -60,7 +60,7 @@ const HeroContent = () => {
     target="_blank" // Optional: opens the link in a new tab
     className='button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] px-4 py-2'
   >
-    Know Me More!
+    Resume
   </a>
 
   <Link href="/books">

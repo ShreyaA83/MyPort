@@ -29,7 +29,7 @@ const books: Book[] = [
   { title: "Shadow Me", author: "Tahereh Mafi", isbn: "9780062906267" },
   { title: "Shatter Me", author: "Tahereh Mafi", isbn: "9780062085504" },
   { title: "Unravel Me", author: "Tahereh Mafi", isbn: "9780062085531" },
-  { title: "War Storm", author: "Victoria Aveyard", isbn: "9780062423006" },
+  { title: "War Storm", author: "Victoria Aveyard", isbn: "9780062423009" },
   { title: "Gone Girl", author: "Gillian Flynn", isbn: "9780307588371" },
   { title: "A Little Life", author: "Hanya Yanagihara", isbn: "9780804172707" },
   { title: "Brother", author: "Ania Ahlborn", isbn: "9781476783734" },
@@ -41,7 +41,7 @@ const books: Book[] = [
   { title: "Reminders of Him", author: "Colleen Hoover", isbn: "9781542025607" },
   { title: "The Girl on the Train", author: "Paula Hawkins", isbn: "9781594634024" },
   { title: "The Silent Patient", author: "Alex Michaelides", isbn: "9781250301697" },
-  { title: "The Song of Achilles", author: "Madeline Miller", isbn: "9780062060620" },
+  { title: "The Song of Achilles", author: "Madeline Miller", isbn: "9780062060624" },
   { title: "Verity", author: "Colleen Hoover", isbn: "9781538724736" },
   { title: "What Lies Between Us", author: "John Marrs", isbn: "9781542017022" },
   { title: "When Ashes Fall", author: "Marni Mann", isbn: "9781790378418" },
@@ -72,7 +72,7 @@ const BooksContent = () => {
           fetchedData[book.title] = thumbnail;
         } catch (error) {
           console.error(`Error fetching cover for ${book.title}`, error);
-          fetchedData[book.title] = "/fallback-cover.png"; // Fallback if API fails
+          fetchedData[book.title] = "/fallback-cover.jpg"; // Fallback if API fails
         }
       }
       setBookData(fetchedData);
@@ -84,17 +84,29 @@ const BooksContent = () => {
   return (
     <div
       id="books"
-      className="flex flex-wrap grid-cols-4 gap-10 pt-10 justify-center"
+      className="grid grid-cols-4 gap-10 pt-10 justify-center"
     >
       {books.map((book) => (
-        <div key={book.title} style={{ textAlign: "center" }}>
+        <div 
+          key={book.title} 
+          className="flex flex-col items-center" 
+          style={{ textAlign: "center" }}
+        >
           <img
-            src={bookData[book.title] || "/fallback-cover.png"}
+            src={bookData[book.title] || "/fallback-cover.jpg"}
             alt={`${book.title} cover`}
             style={{ width: "150px", height: "230px", objectFit: "cover" }}
           />
-          <h3 style={{ margin: "10px 0 0", color: "white" }}>{book.title}</h3>
-          <p style={{ margin: "5px 0", color: "white" }}>{book.author}</p>
+          <h3 
+            style={{ margin: "10px 0 0", color: "white", textAlign: "center" }}
+          >
+            {book.title}
+          </h3>
+          <p 
+            style={{ margin: "5px 0", color: "white", textAlign: "center" }}
+          >
+            {book.author}
+          </p>
         </div>
       ))}
     </div>

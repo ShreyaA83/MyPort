@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
         <Link href="/" className="h-auto w-auto flex flex-row items-center">
           <Image
-            src="/NavLogo.png"
+            src="/heroimg.png"
             alt="logo"
             width={80}
             height={100}
@@ -25,10 +25,10 @@ const Navbar = () => {
             <Link href="/" className="cursor-pointer">
               About me
             </Link>
-            <Link href="#skills" className="cursor-pointer">
+            <Link href="/#skills" className="cursor-pointer">
               Skills
             </Link>
-            <Link href="#projects" className="cursor-pointer">
+            <Link href="/#projects" className="cursor-pointer">
               Projects
             </Link>
 
