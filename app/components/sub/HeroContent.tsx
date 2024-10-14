@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion';
 import { SparklesIcon } from '@heroicons/react/16/solid';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
+import Chaos from '../main/Chaos';
 
 const HeroContent = () => {
     return (
@@ -64,12 +65,13 @@ Know Me More!
         variants={slideInFromRight(0.8)}
         className="w-full h-full flex justify-center items-center"
       >
-        <Image
+        {/* <Image
           src="/heroimg.png"
           alt="work icons"
           height={650}
           width={600}
-        />
+        /> */}
+        <Chaos />
       </motion.div>
     </motion.div>
 
