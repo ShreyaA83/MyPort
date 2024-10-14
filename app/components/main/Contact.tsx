@@ -10,14 +10,14 @@ import mail from '../../../public/Mail.png';
 
 const Contact = () => {
   return (
-    <div>
+    <div id="connect" >
       <div className="flex justify-center items-center pt-5">
         <TextGenerateEffect
           className='gap-6 text-6xl font-bold text-white-400 max-w-[600px] w-auto h-auto z-400'
-          words='Contact' 
+          words='Connect With Me' 
         />
       </div>
-      <div id="contact" className="h-[40rem] w-full flex items-center justify-center ">
+      <div className="h-[40rem] w-full flex items-center justify-center ">
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5'>
 
 
