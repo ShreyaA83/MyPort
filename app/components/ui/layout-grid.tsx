@@ -45,6 +45,11 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
                 : "bg-white rounded-xl h-full w-full"
             )}
             layoutId={`card-${card.id}`}
+            whileHover={{
+              scale: 1.05, // Slightly scale up on hover
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.6)", // Add shadow on hover
+              cursor: "pointer", // Change cursor to pointer on hover
+            }}
           >
             {selected?.id === card.id && <SelectedCard selected={selected} />}
             <ImageComponent card={card} />
@@ -54,7 +59,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          "absolute h-full w-full left-0 top-0 bg-black opacity-0 z-[290]", // Overlay that dims the background
+          "absolute h-full w-full left-0 top-0 bg-black opacity-0 z-[200]", // Overlay that dims the background
           selected?.id ? "pointer-events-auto" : "pointer-events-none"
         )}
         animate={{ opacity: selected?.id ? 0.5 : 0 }} // Dim the background when a card is selected
@@ -71,7 +76,7 @@ const ImageComponent = ({ card }: { card: Card }) => {
       height="500"
       width="500"
       className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200",
+        "cursor:pointer object-cover object-top absolute inset-0 h-full w-full transition duration-200 ",
       )}
       alt="thumbnail"
     />
@@ -105,10 +110,10 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
           y: 100,
         }}
         transition={{
-          duration: 0.3,
+          duration: 0.2,
           ease: "easeInOut",
         }}
-        className="relative px-8 pb-4 z-[310]" // Ensuring content is above the overlay
+        className="relative px-8 pb-4 z-[360]" 
       >
         {selected?.content}
       </motion.div>
