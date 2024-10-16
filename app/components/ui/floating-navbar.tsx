@@ -10,15 +10,22 @@ import { cn } from "../../../utils/utils";
 import Link from "next/link";
 import Image from "next/image";
 
+interface NavItem {
+  name: string;
+  link: string;
+  icon?: JSX.Element;
+}
+
 export const FloatingNav = ({
   navItems,
   className,
 }: {
-  navItems: {
-    name: string;
-    link: string;
-    icon?: JSX.Element;
-  }[];
+  navItems: NavItem[]; // Use the NavItem type here
+  // navItems: {
+  //   name: string;
+  //   link: string;
+  //   icon?: JSX.Element;
+  // }[];
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
@@ -26,7 +33,7 @@ export const FloatingNav = ({
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+      const direction = current! - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() < 0.05) {
         setVisible(false);
@@ -83,7 +90,7 @@ export const FloatingNav = ({
               </span>
             </Link>
 
-            {navItems.map((navItem: any, idx: number) => (
+            {navItems.map((navItem: NavItem, idx: number) => (
               <Link
                 key={`link=${idx}`}
                 href={navItem.link}
