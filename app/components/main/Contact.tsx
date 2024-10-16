@@ -12,7 +12,7 @@ import Link from 'next/link';
 const Contact = () => {
   return (
     <div id="connect">
-    <div className="flex justify-center items-center pt-5">
+    <div className="flex justify-center items-center pt-15">
       <h2
         className='gap-6 text-4xl sm:text-xl lg:text-6xl font-bold text-white max-w-[600px] w-auto h-auto z-[40]'>
         <Link href="/books" className="h-auto w-auto flex flex-row items-center hover:text-blue-100">
@@ -20,7 +20,7 @@ const Contact = () => {
         </Link>
       </h2>
     </div>
-    <div className="h-auto w-full flex items-center justify-center p-4 pt-10 pb-20">
+    <div className="h-auto w-full flex items-center justify-center p-4 pt-20 pb-20">
     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5'>
           {/* First Contact Card */}
           <PinContainer

@@ -23,6 +23,11 @@ const books: Book[] = [
   { title: "The Midnight Library", author: "Matt Haig", isbn: "9780525559498" },
   { title: "A Thousand Splendid Suns", author: "Khaled Hosseini", isbn: "9781594483851" },
   { title: "Anxious People", author: "Fredrik Backman", isbn: "9781501160837" },
+  { title: "My Dark Vanessa", author: "Kate Elizabeth Russell", isbn: "9780062941503" },
+  { title: "Pack Up the Moon", author: "Kristan Higgins", isbn: "9780451489487" },
+  { title: "Reminders of Him", author: "Colleen Hoover", isbn: "9781542025607" },
+  { title: "The Girl on the Train", author: "Paula Hawkins", isbn: "9781594634024" },
+  { title: "The Silent Patient", author: "Alex Michaelides", isbn: "9781250301697" },
   { title: "Gone Girl", author: "Gillian Flynn", isbn: "9780307588371" },
   { title: "A Little Life", author: "Hanya Yanagihara", isbn: "9780804172707" },
   { title: "Brother", author: "Ania Ahlborn", isbn: "9781476783734" },
@@ -46,11 +51,7 @@ const books: Book[] = [
   { title: "War Storm", author: "Victoria Aveyard", isbn: "9780062423009" },
   { title: "It Ends with Us", author: "Colleen Hoover", isbn: "9781501110368" },
   { title: "It Starts with Us", author: "Colleen Hoover", isbn: "9781668001226" },
-  { title: "My Dark Vanessa", author: "Kate Elizabeth Russell", isbn: "9780062941503" },
-  { title: "Pack Up the Moon", author: "Kristan Higgins", isbn: "9780451489487" },
-  { title: "Reminders of Him", author: "Colleen Hoover", isbn: "9781542025607" },
-  { title: "The Girl on the Train", author: "Paula Hawkins", isbn: "9781594634024" },
-  { title: "The Silent Patient", author: "Alex Michaelides", isbn: "9781250301697" },
+
 
 ];
 

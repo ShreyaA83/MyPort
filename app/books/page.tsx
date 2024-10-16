@@ -5,9 +5,9 @@ import BooksContent from "../components/sub/BooksContent"; // Adjust the path if
 
 const Books = () => {
   return (
-    <div className="w-full flex flex-col items-center px-4 lg:px-0">
+    <div className="w-full flex flex-col items-center px-4 lg:px-0 mt-30">
       <h2 className="text-3xl text-white font-bold mb-6 text-center">
-        My Reading List
+        Reading List
       </h2>
       <BooksContent />
     </div>

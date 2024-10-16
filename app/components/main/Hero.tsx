@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <div className='relative flex flex-col h-full w-full'>
             <video
-                className='rotate-180 absolute top-[-340px] left-0 z-[1] 
+                className='rotate-180 absolute top-[-360px] left-0 z-[1] 
       w-full h-full object-cover 
       transition-all duration-500 ease-in-out  
                 opacity-5  xs:opacity-20 

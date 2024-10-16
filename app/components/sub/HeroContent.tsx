@@ -29,14 +29,10 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-4 mt-6 text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-full lg:max-w-[600px]"
         >
-          <span>
-            Providing
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+            <span className="text-transparent py-4 bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-              the best{" "}
+              Shreya Agarwal{" "}
             </span>
-            project experience
-          </span>
         </motion.div>
 
         {/* Subheading */}
@@ -44,7 +40,7 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-base md:text-lg text-gray-400 my-4 max-w-full lg:max-w-[600px]"
         >
-          I am a Full Stack Software Developer & Data Scientist, with a penchant for all things space and data.
+          Full Stack Software Developer & Data Scientist, with a penchant for all things space and data.
         </motion.p>
 
         {/* Buttons */}

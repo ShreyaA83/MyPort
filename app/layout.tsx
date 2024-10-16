@@ -1,23 +1,16 @@
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
 import "./globals.css";
 import { Inter } from "next/font/google";
 // import { Stars } from "@react-three/drei";
 import StarsCanvas from "./components/main/StarBackground";
-import Navbar from "./components/main/Navbar";
+// import Navbar from "./components/main/Navbar";
+import {FloatingNav} from "./components/ui/floating-navbar";
+import { FaHome } from 'react-icons/fa';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
+
 
 export const metadata: Metadata = {
   title: "Shreya's Chaos",
@@ -35,7 +28,14 @@ export default function RootLayout({
         className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden antialiased`}
       >
         <StarsCanvas />
-        <Navbar />
+        <FloatingNav  navItems={
+          
+          [
+            {name: 'Home', link: '/', icon: <FaHome/>},
+            {name: 'Projects', link: '/#projects'},
+            {name: 'Connect', link: '/#connect'},
+          ]
+        } />
         {children}
       </body>
     </html>

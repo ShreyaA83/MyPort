@@ -12,7 +12,7 @@ import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 export function Projects() {
     return (
-        <div id="projects" className="h-screen py-10 w-full">
+        <div id="projects" className="h-screen py-10 w-full mb-40">
             <div className="flex justify-center items-center">
                 <TextGenerateEffect
                     className='flex flex-col gap-6 mt-6 text-6xl font-bold text-white-400 max-w-[600px] w-auto h-auto  z-400'
