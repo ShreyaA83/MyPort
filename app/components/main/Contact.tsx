@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { PinContainer } from '../ui/3d-pin';
-// import { TextGenerateEffect } from "../ui/text-generate-effect";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
 import Image from 'next/image';
 import gitwhite from '../../../public/gitwhite.png';
 import Linkedin from '../../../public/Linkedin.png';
@@ -15,8 +15,10 @@ const Contact = () => {
     <div className="flex justify-center items-center pt-15">
       <h2
         className='gap-6 text-4xl sm:text-xl lg:text-6xl font-bold text-white max-w-[600px] w-auto h-auto z-[40]'>
-        <Link href="/books" className="h-auto w-auto flex flex-row items-center hover:text-blue-100">
-          Connect With Me
+        <Link href="/books" className="h-auto w-auto flex flex-row items-center ">
+        <TextGenerateEffect words="Connect With Me"
+        className='hover:rotate-3'
+        />
         </Link>
       </h2>
     </div>
