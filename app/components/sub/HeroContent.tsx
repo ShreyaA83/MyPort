@@ -11,14 +11,14 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20 mt-20 lg:mt-40 w-full z-[20] space-y-10 lg:space-y-0"
+      className="flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20 mt-8 lg:mt-10 w-full z-[20] space-y-4 lg:space-y-0"
     >
       {/* Left Section - Text Content */}
       <div className="h-full w-full flex flex-col gap-5 justify-center text-center lg:text-start">
         {/* Welcome Box */}
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-3 px-6 border border-[#7042f88b] opacity-[0.9] flex items-center justify-center lg:justify-start"
+          className="Welcome-box py-3 mt-5 px-6 border border-[#7042f88b] opacity-[0.9] flex items-center justify-center lg:justify-start"
         >
           <SparklesIcon className="text-[#b49bff] mr-2 h-5 w-5" />
           <h3 className="Welcome-text text-sm lg:text-[13px]">Developer. Analyst. Thinker.</h3> 
@@ -27,9 +27,9 @@ const HeroContent = () => {
         {/* Main Heading */}
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-4 mt-6 text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-full lg:max-w-[600px]"
+          className="flex flex-col gap-4 mt-4 text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-full lg:max-w-[600px]"
         >
-            <span className="text-transparent py-4 bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+            <span className="text-transparent py-2 bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
               Shreya Agarwal{" "}
             </span>
