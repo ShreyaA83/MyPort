@@ -12,7 +12,7 @@ interface Book {
 
 const books: Book[] = [
   { title: "Atomic Habits", author: "James Clear", isbn: "9780735211292" },
-  { title: "The Perks of being a wallflower", author: "Stephen Chbosky", isbn: "9780671027346" },
+  { title: "The Perks of being a wallflower", author: "Stephen Chbosky", isbn: "9781471180811" },
   { title: "The Alchemist", author: "Paulo Coelho", isbn: "9780061122415" },
   { title: "The Song of Achilles", author: "Madeline Miller", isbn: "9780062060624" },
   { title: "What Lies Between Us", author: "John Marrs", isbn: "9781542017022" },
